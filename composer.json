@@ -1,13 +1,12 @@
 {
   "name": "cafewebcode/webrouter",
-  "description": "A great component to streamline your development, create routes easily with webrouter",
+  "description": "A simple component for sending emails through PHPMailler CafeWebCodeEmail",
   "keywords": [
     "Cafewebcode",
     "Cafe Web",
-    "Router",
-    "Route",
-    "Routes",
-    "Web Router"
+    "mail",
+    "PHPmailler",
+    "send mail"
   ],
   "homepage": "https://agenciacafeweb.com.br",
   "license": "MIT",
