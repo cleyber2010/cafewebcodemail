@@ -1,5 +1,14 @@
 # WebCodeEmail @CafeWebCode
 
+[![Maintainer](http://img.shields.io/badge/maintainer-@cleyber2010-blue.svg?style=flat-square)](https://twitter.com/CleyberMatos)
+[![Source Code](http://img.shields.io/badge/source-cleyber2010/cafewebcodemail-blue.svg?style=flat-square)](https://github.com/cleyber2010/cafewebcodemail)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/cleyber2010/cafewebcodemail.svg?style=flat-square)](https://packagist.org/packages/cleyber2010/cafewebcodemail)
+[![Latest Version](https://img.shields.io/github.com/cleyber2010/cafewebcodemail.svg?style=flat-square)](https://github.com/cleyber2010/cafewebcodemail/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![Build](https://img.shields.io/scrutinizer/build/g/cleyber2010/cafewebcodemail.svg?style=flat-square)](https://scrutinizer-ci.com/g/cleyber2010/cafewebcodemail)
+[![Quality Score](https://img.shields.io/scrutinizer/g/cleyber2010/cafewebcodemail.svg?style=flat-square)](https://scrutinizer-ci.com/g/cleyber2010/cafewebcodemail)
+[![Total Downloads](https://img.shields.io/packagist/dt/cleyber2010/cafewebcodemail.svg?style=flat-square)](https://packagist.org/packages/cleyber2010/cafewebcodemail)
+
 ###### Simple component to make PHPMailler easier to use
 
 Simple component that uses the facade pattern to abstract PHPMailler functions for sending emails. A component to facilitate and speed up your development.
