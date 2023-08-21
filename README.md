@@ -1,12 +1,12 @@
-# WebRouter @CafeWebCode
+# WebCodeEmail @CafeWebCode
 
 ###### Simple component to make PHPMailler easier to use
 
 Simple component that uses the facade pattern to abstract PHPMailler functions for sending emails. A component to facilitate and speed up your development.
 
-## About CafeWebCodEmail
+## About CafeWebCodeEmail
 
-###### CafeWebCodEmail is a set of small and optimized PHP components for common tasks. Held by Cleyber F. Matos.
+###### CafeWebCodeEmail is a set of small and optimized PHP components for common tasks. Held by Cleyber F. Matos.
 
 ## Documentation
 
