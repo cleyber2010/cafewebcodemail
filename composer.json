@@ -23,7 +23,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Cafewebcode\\Webrouter\\": "src"
+      "Cafewebcode\\Webcodemail\\": "src"
     }
   }
 }
