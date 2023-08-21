@@ -1,72 +1,69 @@
 # WebRouter @CafeWebCode
 
-###### Small and simple component to help you with the implementation of scales.
+###### Simple component to make PHPMailler easier to use
 
-A simple and easy to use component. The webrouter is a PHP routing component for MVC abstraction.
+Simple component that uses the facade pattern to abstract PHPMailler functions for sending emails. A component to facilitate and speed up your development.
 
-## About CafeWebRoute
+## About CafeWebCodEmail
 
-###### CafeWebRoute is a set of small and optimized PHP components for common tasks. Held by Cleyber F. Matos.
+###### CafeWebCodEmail is a set of small and optimized PHP components for common tasks. Held by Cleyber F. Matos.
 
 ## Documentation
 
-#### Apache
-
-```apacheconfig
-RewriteEngine On
-
-# ROUTER URL Rewrite
-RewriteCond %{SCRIPT_FILENAME} !-f
-RewriteCond %{SCRIPT_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?route=/$1 [L,QSA]
-```
-##### Routes
 
 ```php
 <?php
 
-use Cafewebcode\Webrouter\Webrouter;
+require __DIR__ . "/../src/config.php";
+require __DIR__ . "/../vendor/phpmailer/phpmailer/src/PHPMailer.php";
+require __DIR__ . "/../vendor/phpmailer/phpmailer/src/Exception.php";
+require __DIR__ . "/../vendor/phpmailer/phpmailer/src/SMTP.php";
+require __DIR__ . "/../src/Mail.php";
 
-$router = new Webrouter("https://www.youdomain.com");
+use Cafewebcode\Cafewebcodemail\Mail;
 
-$router->namespace("Test");
+$mail = new Mail();
 
-$router->get("/route", "Controller:method");
-$router->post("/route/{id}", "Controller:method");
-$router->put("/route/{id}/profile", "Controller:method");
-$router->patch("/route/{id}/profile/{photo}", "Controller:method");
-$router->delete("/route/{id}", "Controller:method");
+$mail->bootstrap(
+    "test submission " . time(),
+    "<h1>Hello Word</h1><p>This is an email sending test</p>",
+    "email@email.com.br",
+    "recipient name"
+);
 
-$router->execute();
-
-if ($router->error()) {
-    var_dump($router->error());
+if ($mail->send("frommail@mail.com.br", "from name")) {
+    echo "Sent with success";
+} else {
+    var_dump($mail->fail());
 }
 
 ```
 
-###### Named Controller Example
+###### Sending attachments
 
 ```php
 <?php
 
-class Name
-{
-   
-    public function home(?array $data): void
-    {
-        echo "<h1>Home</h1>";
-        
-        var_dump($data);
-    }
-    
-}
+$mail = new Mail();
+
+$mail->bootstrap(
+    "test submission " . time(),
+    "<h1>Hello Word</h1><p>This is an email sending test</p>",
+    "email@email.com.br",
+    "recipient name"
+);
+
+$mail->attach("file path", "file Name");
+$mail->attach("file path", "file Name");
+
+$mail->send("frommail@mail.com.br", "from name");
+
 ```
 
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/cleyber2010/webrouter/blob/master/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/cleyber2010/cafewebcodemail/blob/master/CONTRIBUTING.md) for details.
 
 ## Support
 
@@ -77,9 +74,9 @@ Thank you
 ## Credits
 
 - [Cleyber F. Matos](https://github.com/cleyber2010) (Developer)
-- [All Contributors](https://github.com/cleyber2010/webrouter/contributors)
+- [All Contributors](https://github.com/cleyber2010/cafewebcodemail/contributors)
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/cleyber2010/webrouter/blob/master/LICENSE) for more
+The MIT License (MIT). Please see [License File](https://github.com/cleyber2010/cafewebcodemail/blob/master/LICENSE) for more
 information.
